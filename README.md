@@ -10,7 +10,7 @@ This is the boilerplate for creating an API server in AdonisJs, it comes pre-con
 
 ## Setup
 
-Use the adonis command to install the blueprint
+Comando para instalar blueprint
 
 ```bash
 adonis new yardstick --api-only
@@ -20,7 +20,7 @@ or manually clone the repo and then run `npm install`.
 
 ### Migrations
 
-Run the following command to run startup migrations.
+Comando para migraciones.
 
 ```js
 adonis migration:run
@@ -28,7 +28,7 @@ adonis migration:run
 
 ## API Reference
 
-Examples in request folder
+Todas las url de encuestas necesitan el JWT generado al registrarse o hacer login como usuario.
 
 #### Registro de usuario.
 
@@ -52,11 +52,11 @@ POST http://127.0.0.1:3333/api/v1/login
 }
 ```
 
-#### Listar Encuestas paginadas.
+#### Listar datos de Encuestas paginadas.
 
 GET http://127.0.0.1:3333/api/v1/encuestas/:page
 
-#### Crear Encuesta de usuario.
+#### Crear datos para Encuesta de usuario.
 
 POST http://127.0.0.1:3333/api/v1/encuesta
 
@@ -83,3 +83,7 @@ PATCH http://127.0.0.1:3333/api/v1/encuesta/:id
     "calificacion_satisfaccion": 5
 }
 ```
+
+#### Eliminar Encuestas.
+
+DELETE http://127.0.0.1:3333/api/v1/encuesta/:id
