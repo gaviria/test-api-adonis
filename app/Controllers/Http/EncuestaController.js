@@ -107,7 +107,7 @@ class EncuestaController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async destroy({ params, request, response }) {
+  async destroy({ params, request, response, auth }) {
     const user = await auth.getUser();
     const { id } = params;
     const encuesta = await Encuesta.findOrFail(id);
