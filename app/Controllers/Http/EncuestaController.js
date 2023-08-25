@@ -56,7 +56,9 @@ class EncuestaController {
     encuesta.fill(request.all());
     await user.encuestas().save(encuesta);
 
-    return encuesta;
+    return response
+      .status(201)
+      .json({ message: "Encuesta creada", data: encuesta });
   }
 
   /**
